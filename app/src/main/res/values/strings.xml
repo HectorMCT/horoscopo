@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">horoscopo</string>
+
+    <string name="name">Name</string>
+    <string name="enter_name">Enter your name.</string>
+
+    <string name="bdate">Date of birth</string>
+    <string name="enter_bdate">Enter your date of birth.</string>
+
+    <string name="count">Account</string>
+    <string name="enter_count">Enter your account.</string>
+
+    <string name="email">Email</string>
+    <string name="enter_email">Enter your email.</string>
+    <string name="send">Send</string>
+</resources>
