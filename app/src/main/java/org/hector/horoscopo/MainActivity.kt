@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupListeners()
@@ -33,42 +34,37 @@ class MainActivity : AppCompatActivity() {
         binding.userEmail.addTextChangedListener(TextFieldValidation(binding.userEmail))
     }
 
-    private fun isValidate(): Boolean =
-        validateUserName() && validateEmail() && validateCount()
-
-    private fun isValidEmail(email: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
-    }
-
-    private fun isValidCount(count: String): Boolean {
-        if(!Pattern.matches("[a-zA-Z]+", count)) {
-            return count.length == 9
-        }
-        return false
-    }
+    private fun isValidate(): Boolean = validateUserName() && validateEmail() && validateCount()
 
     private fun validateUserName(): Boolean {
-        if (binding.userName.text.toString().trim().isEmpty()) {
-            binding.userNameTil.error = "Required Field!"
-            binding.userName.requestFocus()
-            return false
-        } else {
-            binding.userNameTil.isErrorEnabled = false
+        when {
+            binding.userName.text.toString().trim().isEmpty() -> {
+                binding.userNameTil.error = "Required Field!"
+                binding.userName.requestFocus()
+                return false
+            }
+            else -> {
+                binding.userNameTil.isErrorEnabled = false
+            }
         }
         return true
     }
 
     private fun validateEmail(): Boolean {
-        if (binding.userEmail.text.toString().trim().isEmpty()) {
-            binding.userEmailTil.error = "Required Field!"
-            binding.userEmail.requestFocus()
-            return false
-        } else if (!isValidEmail(binding.userEmail.text.toString())) {
-            binding.userEmailTil.error = "Invalid Email!"
-            binding.userEmail.requestFocus()
-            return false
-        } else {
-            binding.userEmailTil.isErrorEnabled = false
+        when {
+            binding.userEmail.text.toString().trim().isEmpty() -> {
+                binding.userEmailTil.error = "Required Field!"
+                binding.userEmail.requestFocus()
+                return false
+            }
+            !FieldValidators.isValidEmail(binding.userEmail.text.toString()) -> {
+                binding.userEmailTil.error = "Invalid Email!"
+                binding.userEmail.requestFocus()
+                return false
+            }
+            else -> {
+                binding.userEmailTil.isErrorEnabled = false
+            }
         }
         return true
     }
@@ -80,13 +76,13 @@ class MainActivity : AppCompatActivity() {
                 binding.userCount.requestFocus()
                 return false
             }
-            binding.userCount.text.toString().length != 9 -> {
-                binding.userCountTil.error = "Your count need to be 9 characters"
+            !FieldValidators.isValidCount(binding.userCount.text.toString()) -> {
+                binding.userCountTil.error = "Only digits are required"
                 binding.userCount.requestFocus()
                 return false
             }
-            !isValidCount(binding.userCount.text.toString()) -> {
-                binding.userCountTil.error = "Only digits are required"
+            binding.userCount.text.toString().length != 9 -> {
+                binding.userCountTil.error = "Your count need to be 9 numbers"
                 binding.userCount.requestFocus()
                 return false
             }
