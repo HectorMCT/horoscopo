@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hecto/Documents/Horoscopo/app/src/main/res/drawable/dog.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/hecto/Documents/Horoscopo/app/src/main/res/layout/activity_horos.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/hecto/Documents/Horoscopo/app/src/main/res/layout/activity_horosc.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/hecto/Documents/Horoscopo/app/src/main/res/layout/activity_horoscope.xml" value="0.1" />
+        <entry key="..\:/Users/hecto/Documents/Horoscopo/app/src/main/res/layout/activity_horoscope.xml" value="0.22" />
         <entry key="..\:/Users/hecto/Documents/Horoscopo/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
