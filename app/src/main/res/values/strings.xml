@@ -16,9 +16,11 @@
 
     <string name="date_format">%1$d/%2$d/%3$d</string>
 
+    <string name="compatible">Compatibility: </string>
+
     <!-- Horoscope  -->
 
-    <string name="first_horoscope">Tigre</string>
+    <string name="first_horoscope">Tiger</string>
     <string name="second_horoscope">Rabbit</string>
     <string name="third_horoscope">Dragon</string>
     <string name="fourth_horoscope">Snake</string>
@@ -31,5 +33,21 @@
     <string name="eleven_horoscope">Rat</string>
     <string name="twelve_horoscope">Ox</string>
 
+    <string name="horoscope">User Horoscope</string>
+
+    <!-- Mensajes -->
+
+    <string name="first_msg">People of this sign are very passionate and full of energy. They do not go unnoticed, they are adventurous, independent, resourceful, impulsive and they like fun. They are friends for life, although they like to be the leader of the group. In the world of couple relationships, they are the strongest, sexiest and most seductive, although with excessive behavior.</string>
+    <string name="second_msg">Those born in the Year of the Rabbit have extraordinary human qualities: they are prudent, intelligent, affable, discreet, forward-looking, attentive and benevolent. Therefore, the sign of the rabbit is widely accepted by people. Of moderate and indulgent character, lover of peace and concord, the rabbit hates war and violence. He likes a quiet life, tenderness and harmony.</string>
+    <string name="third_msg">Symbol of the Emperor in China, the dragon is imaginative, magnanimous, enterprising, lucky and powerful. It is full of strength and vitality. He is a true accumulator of energy and if you make him angry, he will become so enraged that he will lose his temper. It will be difficult to calm him down, because he does not believe in anyone or anyone. They tend to give good advice and are lucky in both money and love. They are very sentimental and fall madly in love.</string>
+    <string name="fourth_msg">Snake people are cunning, they know what they want and how to get it. His conversation is elegant and fluid. They are intense and cautious at the same time. They are jealous and possessive of their family but loyal. They like to pamper their friends and expect a reciprocal attitude from them. If they feel scorned or fail in their attempts, they can be angry for hours, although they are good at staying calm and appearing calm in difficult situations.</string>
+    <string name="five_msg">Popular, optimistic, full of joy, adventurous, eloquent, impatient, enterprising, enthusiastic about life, great lovers and friends. His great passion is money and travel. They like to meet new people, different cultures, speak languages and are the lifeblood of parties. Their physical attractiveness and beauty make it easy for them to find love - a trap into which they hopelessly fall.</string>
+    <string name="six_msg">The goat is creative, artistic, positive, graceful, feminine, personable, compassionate, whiny, sensitive, dreamy, proud, and sad. They do not pursue material wealth and prefer to live off their dreams. They love family, children, home and being in contact with nature. They are very hard-working, although they do not like the pressure of a deadline or a boss.</string>
+    <string name="seven_msg">Animal more similar to human beings, it is ingenious, funny, friendly, quick-minded and alert, buyer, persuasive, sociable, capable of solving any problem no matter how difficult it may be with ease. His love relationships and with his friends are often conflictive, as he can not stand being valued. They are in good health, although their excesses at parties, alcohol and drugs could take their toll.</string>
+    <string name="eight_msg">Attractive and seductive, talented and appreciated. They are meticulous, efficient, orderly, good talkers, observant, selfish, usurious, pragmatic, and very familiar. In love they are romantic, stubborn and fight for control of their partner. They tend to stand out as public relations or as artists. They do not pay too much attention to their health.</string>
+    <string name="nine_msg">The dog is a being dedicated to work, honest, trustworthy, diligent, with a great sense of justice and loyalty. He captivates everyone with his exciting personality, good humor, and great ability to listen to other people\'s problems and give good advice. In love they are faithful and loyal, although very jealous when his partner is not at home. Nerves are his biggest health problem.</string>
+    <string name="ten_msg">It is a sincere, honest, trusting, educated, affectionate, helpful, courageous, determined animal, with great willpower, without great pretensions or vanity, with its feet on the ground. They are very personable and have impeccable taste and manners. In love they are sensual, passionate and patient, but up to a point. They are very hard-working, although the lack of attraction for sports and apathy will make their physique suffer and they will become excessively fat.</string>
+    <string name="eleven_msg">Those born under the sign of the Rat are wise people who like to surround themselves with family and friends, who help them with their daily tasks and problems. Good workers, savers and good managers of their economy.</string>
+    <string name="twelve_msg">Oxen are patient and calm animals, radiating a lot of affection and love and instilling respect. Great workers, they feel comfortable surrounded by order and cleanliness and achieve success thanks to their effort. For them the most important thing is the family, although they are jealous of their partner. They love art and music. They do not like to argue, although they do obey him.</string>
 
 </resources>

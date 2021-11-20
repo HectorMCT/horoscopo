@@ -19,7 +19,7 @@ object FieldValidators {
 
     fun isValidDate(date: String): Boolean {
         return when {
-            Pattern.matches("[0-9]{1,2}/[0-9]{2}/[0-9]{4}", date) -> {
+            Pattern.matches("(3[01]|[12][0-9]|0?[1-9])/(0?[1-9]|1[012])/[0-9]{4}", date) -> {
                 true
             }
             else -> false
