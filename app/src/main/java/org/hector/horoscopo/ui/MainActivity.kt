@@ -1,4 +1,4 @@
-package org.hector.horoscopo
+package org.hector.horoscopo.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -8,21 +8,21 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.Toast
+import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
+import org.hector.horoscopo.R
 import org.hector.horoscopo.databinding.ActivityMainBinding
+import org.hector.horoscopo.model.User
+import org.hector.horoscopo.util.FieldValidators
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.*
-import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
-    companion object {
-        const val ARG_USERNAME = "USERNAME"
-        const val ARG_EMAIL = "EMAIL"
-        const val ARG_COUNT = "COUNT"
-        const val ARG_DATE = "DATE"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,21 +31,29 @@ class MainActivity : AppCompatActivity() {
 
         setupListeners()
 
-        binding.userBdate.setOnClickListener { showDatePickerDialog()  }
+        binding.userBdate.setOnClickListener {
+            showDatePickerDialog()
+        }
 
         binding.sendButton.setOnClickListener {
-            if (isValidate()) {
-                val arguments = Bundle().apply {
-                    putString(ARG_USERNAME, binding.userName.text.toString())
-                    putString(ARG_EMAIL, binding.userEmail.text.toString())
-                    putString(ARG_COUNT, binding.userCount.text.toString())
-                    putString(ARG_DATE, binding.userBdate.text.toString())
-                }
-                Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show()
-                intent = Intent(this, HoroscopeActivity::class.java)
-                intent.putExtras(arguments)
-                startActivity(intent)
-            }
+            validate()
+        }
+    }
+
+    private fun validate(){
+        if (isValidate()) {
+
+            val user = User(binding.userName.text.toString(),
+                binding.userEmail.text.toString(),
+                binding.userCount.text.toString(),
+                binding.userBdate.text.toString())
+
+            Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show()
+
+            intent = Intent(this, HoroscopeActivity::class.java)
+            intent.putExtra("USER",user)
+
+            startActivity(intent)
         }
     }
 
@@ -59,15 +67,11 @@ class MainActivity : AppCompatActivity() {
     private fun isValidate(): Boolean = validateUserName() && validateEmail() && validateCount() && validateDate()
 
     private fun showDatePickerDialog() {
-        val calendar = Calendar.getInstance()
-        val myDay= calendar.get(Calendar.DAY_OF_MONTH)
-        val myMonth = calendar.get(Calendar.MONTH)
-        val myYear = calendar.get(Calendar.YEAR)
 
-        val datePicker = DatePickerDialog(this, { _, year, month, dayOfMonth ->
-            binding.userBdate.setText(getString(R.string.date_format, dayOfMonth, month, year))
-        }, myYear, myMonth, myDay)
-        datePicker.show()
+        val newFragment = DatePickerFragment.newInstance { _, year, month, dayOfMonth ->
+            binding.userBdate.setText(getString(R.string.date_format, dayOfMonth + 1, month, year))
+        }
+        newFragment.show(supportFragmentManager, "datePicker")
     }
 
     private fun validateUserName(): Boolean {
@@ -146,14 +150,10 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    /**
-     * applying text watcher on each text field
-     */
     inner class TextFieldValidation(private val view: View) : TextWatcher {
         override fun afterTextChanged(s: Editable?) {}
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            // checking ids of each text field and applying functions accordingly.
             when (view.id) {
                 R.id.user_name -> {
                     validateUserName()

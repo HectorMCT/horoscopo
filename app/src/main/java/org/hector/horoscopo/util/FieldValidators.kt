@@ -1,4 +1,4 @@
-package org.hector.horoscopo
+package org.hector.horoscopo.util
 
 import java.util.regex.Pattern
 

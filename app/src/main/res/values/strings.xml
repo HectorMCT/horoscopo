@@ -15,4 +15,21 @@
     <string name="send">Send</string>
 
     <string name="date_format">%1$d/%2$d/%3$d</string>
+
+    <!-- Horoscope  -->
+
+    <string name="first_horoscope">Tigre</string>
+    <string name="second_horoscope">Rabbit</string>
+    <string name="third_horoscope">Dragon</string>
+    <string name="fourth_horoscope">Snake</string>
+    <string name="five_horoscope">Horse</string>
+    <string name="six_horoscope">Goat</string>
+    <string name="seven_horoscope">Monkey</string>
+    <string name="eight_horoscope">Rooster</string>
+    <string name="nine_horoscope">Dog</string>
+    <string name="ten_horoscope">Pig</string>
+    <string name="eleven_horoscope">Rat</string>
+    <string name="twelve_horoscope">Ox</string>
+
+
 </resources>

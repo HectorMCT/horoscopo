@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -48,7 +48,11 @@
             android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/hint_text" />
+            android:textColorHint="@color/hint_text"
+            android:inputType="text"
+            android:focusable="true"
+            android:clickable="true"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +85,11 @@
             android:id="@+id/user_bdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/hint_text"  />
+            android:textColorHint="@color/hint_text"
+            android:inputType="date"
+            android:focusable="true"
+            android:clickable="true"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +125,9 @@
             android:id="@+id/user_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/hint_text"/>
+            android:textColorHint="@color/hint_text"
+            android:inputType="number"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -154,7 +164,9 @@
             android:id="@+id/user_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/hint_text" />
+            android:textColorHint="@color/hint_text"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
