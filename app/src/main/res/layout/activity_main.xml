@@ -51,7 +51,7 @@
         app:boxCornerRadiusTopStart="10dp"
 
         app:counterEnabled="true"
-        app:counterMaxLength="25"
+        app:counterMaxLength="35"
 
         app:helperText="@string/enter_name"
         app:helperTextTextColor="@color/black"
@@ -68,6 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/hint_text"
+            android:maxLength="35"
             android:inputType="text"
             android:focusable="true"
             android:clickable="true"
@@ -157,6 +158,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/hint_text"
+            android:maxLength="9"
             android:inputType="number"
             android:maxLines="1"/>
 
@@ -184,7 +186,7 @@
         app:boxCornerRadiusTopStart="10dp"
 
         app:counterEnabled="true"
-        app:counterMaxLength="50"
+        app:counterMaxLength="40"
 
         app:helperText="@string/enter_email"
         android:textColorHint="@color/black"
@@ -201,6 +203,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/hint_text"
             android:inputType="textEmailAddress"
+            android:maxLength="40"
             android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
