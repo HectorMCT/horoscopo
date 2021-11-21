@@ -37,7 +37,13 @@ class HoroscopeActivity : AppCompatActivity() {
         binding.returnMain.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+            finish()
         }
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
     private fun zodiacName(name: String): String{
