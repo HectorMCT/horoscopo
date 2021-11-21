@@ -7,7 +7,7 @@ object AppContent {
 
     private val horoscope =  mutableSetOf(
 
-        Horoscope("Tigre", arrayListOf(1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022), R.drawable.tigre, R.drawable.tiger_year),
+        Horoscope("Tiger", arrayListOf(1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022), R.drawable.tigre, R.drawable.tiger_year),
         Horoscope("Rabbit", arrayListOf(1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023), R.drawable.rabbit, R.drawable.rat_year),
         Horoscope("Dragon", arrayListOf(1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024), R.drawable.dragon, R.drawable.dragon_year),
         Horoscope("Snake", arrayListOf(1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025), R.drawable.snake, R.drawable.snake_year),
