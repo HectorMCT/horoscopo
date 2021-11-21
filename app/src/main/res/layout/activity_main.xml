@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/zodiac"
     tools:context=".ui.MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -12,6 +13,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="64dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zodiac_chinese"
+        android:textColor="@color/black"
+        app:autoSizeMaxTextSize="32dp"
+        app:autoSizeMinTextSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/user_name_til"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/user_name_til"
@@ -23,7 +38,10 @@
 
         android:layout_marginEnd="24dp"
 
+        app:boxBackgroundColor="@color/white"
+
         android:hint="@string/name"
+        android:textColorHint="@color/black"
         app:boxBackgroundMode="outline"
 
         app:boxCornerRadiusBottomEnd="10dp"
@@ -36,11 +54,12 @@
         app:counterMaxLength="25"
 
         app:helperText="@string/enter_name"
+        app:helperTextTextColor="@color/black"
 
         app:layout_constraintBottom_toTopOf="@id/user_bdate_til"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:startIconDrawable="@drawable/ic_user">
 
 
@@ -67,14 +86,18 @@
 
         android:layout_marginEnd="24dp"
         android:hint="@string/bdate"
+        android:textColorHint="@color/black"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="10dp"
 
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
 
+        app:boxBackgroundColor="@color/white"
+
         app:boxCornerRadiusTopStart="10dp"
         app:helperText="@string/enter_bdate"
+        app:helperTextTextColor="@color/black"
 
         app:layout_constraintTop_toBottomOf="@id/user_name_til"
         app:layout_constraintBottom_toTopOf="@id/user_count_til"
@@ -107,6 +130,7 @@
         android:layout_marginEnd="24dp"
 
         android:hint="@string/count"
+        android:textColorHint="@color/black"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -114,10 +138,13 @@
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
 
+        app:boxBackgroundColor="@color/white"
+
         app:counterEnabled="true"
         app:counterMaxLength="9"
 
         app:helperText="@string/enter_count"
+        app:helperTextTextColor="@color/black"
 
         app:layout_constraintBottom_toTopOf="@id/user_email_til"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,6 +178,8 @@
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
 
+        app:boxBackgroundColor="@color/white"
+
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
 
@@ -158,6 +187,8 @@
         app:counterMaxLength="50"
 
         app:helperText="@string/enter_email"
+        android:textColorHint="@color/black"
+        app:helperTextTextColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/send_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

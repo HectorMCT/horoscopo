@@ -3,10 +3,12 @@
     <string name="app_name">Horoscopo</string>
 
     <!-- Formulario Main -->
+    <string name="zodiac_chinese">Horoscopo Chino</string>
+
     <string name="name">Nombre</string>
     <string name="enter_name">Ingresa tu nombre.</string>
     <string name="bdate">Fecha de nacimiento</string>
-    <string name="enter_bdate">Ingresa tu fecha de nacimiento. dd/mm/yyyy</string>
+    <string name="enter_bdate">Ingresa tu fecha de nacimiento.</string>
     <string name="count">Cuenta escolar</string>
     <string name="enter_count">Ingresa tu numero de cuenta.</string>
     <string name="email">Correo electornico</string>

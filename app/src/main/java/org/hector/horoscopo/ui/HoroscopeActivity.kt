@@ -39,6 +39,12 @@ class HoroscopeActivity : AppCompatActivity() {
         }
     }
 
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_left, R.anim.slide_right)
+    }
+
     private fun zodiacName(name: String): String{
 
         return when (name) {

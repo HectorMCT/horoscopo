@@ -1,6 +1,5 @@
 package org.hector.horoscopo.ui
 
-import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,17 +7,10 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.Toast
-import com.google.android.material.datepicker.CalendarConstraints
-import com.google.android.material.datepicker.MaterialDatePicker
 import org.hector.horoscopo.R
 import org.hector.horoscopo.databinding.ActivityMainBinding
 import org.hector.horoscopo.model.User
 import org.hector.horoscopo.util.FieldValidators
-import java.time.Instant
-import java.time.LocalDateTime
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("USER",user)
 
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_right, R.anim.slide_left)
         }
     }
 
@@ -69,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     private fun showDatePickerDialog() {
 
         val newFragment = DatePickerFragment.newInstance { _, year, month, dayOfMonth ->
-            binding.userBdate.setText(getString(R.string.date_format, dayOfMonth + 1, month, year))
+            binding.userBdate.setText(getString(R.string.date_format, dayOfMonth, month+1, year))
         }
         newFragment.show(supportFragmentManager, "datePicker")
     }
