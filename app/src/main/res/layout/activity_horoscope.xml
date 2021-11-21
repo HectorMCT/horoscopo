@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootRL"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/dragon">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        android:backgroundTint="@color/trant_card" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Media -->
             <ImageView
                 android:id="@+id/card_image"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="160dp"
                 android:src="@drawable/dragon_year"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/horoscope"
@@ -33,12 +42,12 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Title, secondary and supporting text -->
                 <TextView
                     android:id="@+id/card_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     />
 
@@ -48,35 +57,37 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/horoscope_smsg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:text="@string/compatible"
                     android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
+                    android:textColor="@color/white"
                     />
 
             </LinearLayout>
 
-            <!-- Buttons -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="horizontal">
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/return_main"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="Hola"
-                    style="?attr/borderlessButtonStyle"
+                    android:text="@string/back"
                     />
             </LinearLayout>
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    </ScrollView>
 </RelativeLayout>

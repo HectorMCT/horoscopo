@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     private fun validateUserName(): Boolean {
         when {
             binding.userName.text.toString().trim().isEmpty() -> {
-                binding.userNameTil.error = "Required Field!"
+                binding.userNameTil.error = getString(R.string.required_field)
                 binding.userName.requestFocus()
                 return false
             }
@@ -91,12 +91,12 @@ class MainActivity : AppCompatActivity() {
     private fun validateEmail(): Boolean {
         when {
             binding.userEmail.text.toString().trim().isEmpty() -> {
-                binding.userEmailTil.error = "Required Field!"
+                binding.userEmailTil.error = getString(R.string.required_field)
                 binding.userEmail.requestFocus()
                 return false
             }
             !FieldValidators.isValidEmail(binding.userEmail.text.toString()) -> {
-                binding.userEmailTil.error = "Invalid Email!"
+                binding.userEmailTil.error = getString(R.string.invalid_email)
                 binding.userEmail.requestFocus()
                 return false
             }
@@ -110,17 +110,17 @@ class MainActivity : AppCompatActivity() {
     private fun validateCount(): Boolean {
         when {
             binding.userCount.text.toString().trim().isEmpty() -> {
-                binding.userCountTil.error = "Required Field!"
+                binding.userCountTil.error = getString(R.string.required_field)
                 binding.userCount.requestFocus()
                 return false
             }
             !FieldValidators.isValidCount(binding.userCount.text.toString()) -> {
-                binding.userCountTil.error = "Only digits are required"
+                binding.userCountTil.error = getString(R.string.only_digits)
                 binding.userCount.requestFocus()
                 return false
             }
             binding.userCount.text.toString().length != 9 -> {
-                binding.userCountTil.error = "Your count need to be 9 numbers"
+                binding.userCountTil.error = getString(R.string.incorrect_count)
                 binding.userCount.requestFocus()
                 return false
             }
@@ -134,12 +134,12 @@ class MainActivity : AppCompatActivity() {
     private fun validateDate(): Boolean {
         when {
             binding.userBdate.text.toString().trim().isEmpty() -> {
-                binding.userBdateTil.error = "Required Field!"
+                binding.userBdateTil.error = getString(R.string.required_field)
                 binding.userBdate.requestFocus()
                 return false
             }
             !FieldValidators.isValidDate(binding.userBdate.text.toString()) -> {
-                binding.userBdateTil.error = "Bad format date!"
+                binding.userBdateTil.error = getString(R.string.date_error)
                 binding.userBdate.requestFocus()
                 return false
             }

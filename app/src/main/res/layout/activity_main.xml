@@ -87,11 +87,15 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/hint_text"
             android:inputType="date"
-            android:focusable="true"
             android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:cursorVisible="false"
+            android:focusable="false"
             android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <!--android:focusable="true"-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/user_count_til"

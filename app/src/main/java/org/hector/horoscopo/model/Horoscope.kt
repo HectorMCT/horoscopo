@@ -4,8 +4,6 @@ data class Horoscope(
     val name: String,
     var years: ArrayList<Int>,
     val background: Int,
-    val image: Int,
-    val message: String,
-    var compatible: ArrayList<String>) {
+    val image: Int) {
 
 }

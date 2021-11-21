@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">horoscopo</string>
+    <string name="app_name">Horoscopo</string>
 
+    <!-- Formulario Main -->
     <string name="name">Nombre</string>
     <string name="enter_name">Ingresa tu nombre.</string>
-
     <string name="bdate">Fecha de nacimiento</string>
-    <string name="enter_bdate">Ingresa tu fecha de nacimiento.</string>
-
+    <string name="enter_bdate">Ingresa tu fecha de nacimiento. dd/mm/yyyy</string>
     <string name="count">Cuenta escolar</string>
     <string name="enter_count">Ingresa tu numero de cuenta.</string>
-
     <string name="email">Correo electornico</string>
     <string name="enter_email">Ingresa tu correo electornico.</string>
     <string name="send">Enviar</string>
 
     <string name="date_format">%1$d/%2$d/%3$d</string>
 
+    <!-- Errors -->
+    <string name="required_field">¡Campo Requerido!</string>
+    <string name="invalid_email">Formato de Email incorrecto</string>
+    <string name="only_digits">Solo se requiere ingresar digitos</string>
+    <string name="incorrect_count">Solo se deben ingresar 9 digitos</string>
+    <string name="date_error">Formato de fecha incorrecto</string>
+
+    <!-- Horoscope Activity-->
     <string name="compatible">Compatibilidad: </string>
+    <string name="back">Regresar</string>
+    <string name="name_format">Tu suerte %1$s</string>
+    <string name="content_format">%1$s: %2$s</string>
+
+
 
     <!-- Horoscope  -->
-
     <string name="first_horoscope">Tigre</string>
     <string name="second_horoscope">Conejo</string>
     <string name="third_horoscope">Dragón</string>
@@ -37,7 +47,6 @@
     <string name="horoscope">User Horoscope</string>
 
     <!-- Mensajes -->
-
     <string name="first_msg">Las personas de este signo son muy pasionales y llenas de energía. No pasan desapercibidas, son aventureros, independientes, ingeniosos, impulsivos y les gusta la diversión. Son amigos para toda la vida, aunque les gusta ser el líder del grupo. En el mundo de las relaciones de pareja se muestran el más fuerte, sexy y seductor, aunque de comportamiento excesivo.</string>
     <string name="second_msg">Los que nacen en el Año del Conejo reúnen extraordinarias cualidades humanas: son prudentes, inteligentes, afables, discretos, previsores, atentos y benevolentes. Por eso, el signo del conejo es ampliamente aceptado por la gente. De carácter moderado e indulgente, amante de la paz y la concordia, el conejo odia la guerra y la violencia. Le gusta la vida tranquila, la ternura y la armonía.</string>
     <string name="third_msg">Símbolo del Emperador en China, el dragón es imaginativo, magnánimo, emprendedor, afortunado y poderoso. Está lleno de fuerza y vitalidad. Es un verdadero acumulador de energía y si le enojas, se enfurecerá de tal manera que perderá los estribos. Será difícil calmarle, pues no cree ni a nadie ni en nadie. Suelen dar buenos consejos y son afortunados tanto en el dinero como en el amor. Son muy sentimentales y se enamoran locamente.</string>
