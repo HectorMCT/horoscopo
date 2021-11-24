@@ -8,6 +8,7 @@ import org.hector.horoscopo.R
 import org.hector.horoscopo.databinding.ActivityHoroscopeBinding
 import org.hector.horoscopo.model.User
 import org.hector.horoscopo.util.AppContent.horoscopes
+import java.util.*
 
 class HoroscopeActivity : AppCompatActivity() {
 
@@ -26,6 +27,13 @@ class HoroscopeActivity : AppCompatActivity() {
                 if (persona.date.split("/")[2].toInt() in horoscope.years){
                     relativeLayout.setBackgroundResource(horoscope.background)
                     binding.cardImage.setImageResource(horoscope.image)
+
+                    binding.cardNameUser.text = getString(R.string.card_name_user, persona.username)
+                    binding.cardAgeUser.text = getString(R.string.age, getAge(persona.date.split("/")[0].toInt(),persona.date.split("/")[1].toInt(),persona.date.split("/")[2].toInt()))
+                    binding.cardDateUser.text = getString(R.string.date_zodiac, persona.date)
+                    binding.cardCountUser.text = getString(R.string.count_zodiac, persona.count)
+                    binding.cardEmailUser.text = getString(R.string.email_zodiac, persona.email)
+
                     binding.cardName.text = getString(R.string.name_format, persona.username)
                     binding.horoscopeMsg.text = getString(R.string.content_format, zodiacName(horoscope.name), decideMessage(horoscope.name))
                     binding.horoscopeSmsg.append(" " + decideCompatible(horoscope.name))
@@ -39,6 +47,18 @@ class HoroscopeActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
             finish()
         }
+    }
+
+    private fun getAge(day: Int, month: Int, year: Int): String {
+        val dob = Calendar.getInstance()
+        val today = Calendar.getInstance()
+        dob[year, month] = day
+        var age = today[Calendar.YEAR] - dob[Calendar.YEAR]
+        if (today[Calendar.DAY_OF_YEAR] < dob[Calendar.DAY_OF_YEAR]) {
+            age--
+        }
+        val ageInt = age
+        return ageInt.toString()
     }
 
     override fun finish() {

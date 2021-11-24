@@ -30,6 +30,13 @@
     <string name="name_format">Your Lucky %1$s</string>
     <string name="content_format">%1$s: %2$s</string>
 
+    <string name="card_name_user">Your info %1$s</string>
+    <string name="age">Age: %1$s</string>
+    <string name="date_zodiac">Birthday: %1$s</string>
+    <string name="count_zodiac">No. Count: %1$s</string>
+    <string name="email_zodiac">Email: %1$s</string>
+
+
     <!-- Horoscope  -->
     <string name="first_horoscope">Tiger</string>
     <string name="second_horoscope">Rabbit</string>
@@ -59,7 +66,6 @@
     <string name="ten_msg">It is a sincere, honest, trusting, educated, affectionate, helpful, courageous, determined animal, with great willpower, without great pretensions or vanity, with its feet on the ground. They are very personable and have impeccable taste and manners. In love they are sensual, passionate and patient, but up to a point. They are very hard-working, although the lack of attraction for sports and apathy will make their physique suffer and they will become excessively fat.</string>
     <string name="eleven_msg">Those born under the sign of the Rat are wise people who like to surround themselves with family and friends, who help them with their daily tasks and problems. Good workers, savers and good managers of their economy.</string>
     <string name="twelve_msg">Oxen are patient and calm animals, radiating a lot of affection and love and instilling respect. Great workers, they feel comfortable surrounded by order and cleanliness and achieve success thanks to their effort. For them the most important thing is the family, although they are jealous of their partner. They love art and music. They do not like to argue, although they do obey him.</string>
-
 
 
 </resources>

@@ -30,7 +30,11 @@
     <string name="name_format">Tu suerte %1$s</string>
     <string name="content_format">%1$s: %2$s</string>
 
-
+    <string name="card_name_user">Tu info %1$s</string>
+    <string name="age">Edad: %1$s</string>
+    <string name="date_zodiac">Fecha de Nacimiento: %1$s</string>
+    <string name="count_zodiac">No. Cuenta: %1$s</string>
+    <string name="email_zodiac">Correo: %1$s</string>
 
     <!-- Horoscope  -->
     <string name="first_horoscope">Tigre</string>
@@ -61,5 +65,6 @@
     <string name="ten_msg">Es un animal sincero, honesto, confiado, educado, cariñoso, servicial, valiente, decidido, con gran fuerza de voluntad, sin grandes pretensiones ni vanidad, con los pies en la tierra. Son muy agradables y tienen gusto y modales impecables. En el amor son sensuales, apasionado y pacientes, pero hasta un punto. Son muy trabajadores, aunque la falta de atracción por el deporte y la apatía harán que su físico se resienta y engorde en exceso.</string>
     <string name="eleven_msg">Los nacidos bajo el signo de la Rata son persona sabias a las que les gusta rodearse de familiares y amigos, a quienes ayudan en sus quehaceres y problemas diarios. Buenas trabajadoras, ahorradores y buenos administradores de su economía.</string>
     <string name="twelve_msg">Los búfalos o bueyes son animales pacientes y tranquilos, que irradian mucho cariño y amor e infunden respeto. Grandes trabajadores, se sienten a gusto rodeados del orden y la limpieza y logran el éxito gracias a su esfuerzo. Para ellos lo más importante es la familia, aunque son celosos con su pareja. Aman el arte y la música. No les gusta discutir, aunque sí que le obedezcan.</string>
+
 
 </resources>
